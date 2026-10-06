@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yeferson — Creative Developer & Designer</title>
+    <title>Yeferson Camilo — Sistemas, Soporte TI, Redes y Automatización</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -14,26 +14,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        pastelBg: '#FDFBF7',          /* Warm cream background */
-                        pastelYellow: '#FCEFC7',      /* Soft cream yellow */
-                        pastelSkin: '#F2D3C2',        /* Warm skin tone */
-                        pastelBrown: '#5C4A42',       /* Elegant dark brown */
-                        pastelMuted: '#8C7A72',       /* Desaturated secondary brown */
-                        pastelCard: '#F7F2EB',        /* Card background */
-                        accentWarm: '#E09F67',        /* Toasted warm accent */
-                        darkJacket: '#2A2A2A'         /* Black leather jacket tone */
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
-                    }
-                }
-            }
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            menu.classList.toggle('hidden');
+            if (!menu.classList.contains('hidden')) { icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark'); }
+            else { icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars'); }
         }
+        function scrollToConnect() { document.getElementById('connect').scrollIntoView({ behavior: 'smooth' }); }
     </script>
     <style>
         body {
@@ -67,16 +55,17 @@
         <!-- Desktop Menu -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-pastelMuted">
             <a href="#about" class="hover:text-pastelBrown transition-colors">Sobre mí</a>
-            <a href="#projects" class="hover:text-pastelBrown transition-colors">Proyectos</a>
+            <a href="#projects" class="hover:text-pastelBrown transition-colors">Experiencia</a>
             <a href="#skills" class="hover:text-pastelBrown transition-colors">Habilidades</a>
-            <a href="#contact" class="hover:text-pastelBrown transition-colors">Contacto</a>
+            <a href="#education" class="hover:text-pastelBrown transition-colors">Formación</a>
+            <a href="#connect" class="hover:text-pastelBrown transition-colors">Conecta conmigo</a>
         </nav>
 
         <!-- CTA & Mobile Toggle -->
         <div class="flex items-center gap-4">
-            <button onclick="openContactModal()" class="flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-pastelCard hover:bg-pastelYellow border border-pastelMuted/20 px-5 py-2.5 rounded-full shadow-sm transition-all duration-300">
+            <button onclick="scrollToConnect()" class="flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-pastelCard hover:bg-pastelYellow border border-pastelMuted/20 px-5 py-2.5 rounded-full shadow-sm transition-all duration-300">
                 <i class="fa-regular fa-comment-dots text-pastelBrown"></i>
-                <span>Hire Me</span>
+                <span>Conecta conmigo</span>
             </button>
             <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-pastelCard border border-pastelMuted/20 text-pastelBrown">
                 <i class="fa-solid fa-bars text-lg" id="menuIcon"></i>
@@ -90,9 +79,10 @@
             <i class="fa-solid fa-xmark"></i>
         </button>
         <a href="#about" onclick="toggleMobileMenu()" class="hover:text-accentWarm transition-colors">Sobre mí</a>
-        <a href="#projects" onclick="toggleMobileMenu()" class="hover:text-accentWarm transition-colors">Proyectos</a>
+        <a href="#projects" onclick="toggleMobileMenu()" class="hover:text-accentWarm transition-colors">Experiencia</a>
         <a href="#skills" onclick="toggleMobileMenu()" class="hover:text-accentWarm transition-colors">Habilidades</a>
-        <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-accentWarm transition-colors">Contacto</a>
+        <a href="#education" onclick="toggleMobileMenu()" class="hover:text-accentWarm transition-colors">Formación</a>
+        <a href="#connect" onclick="toggleMobileMenu()" class="hover:text-accentWarm transition-colors">Conecta conmigo</a>
     </div>
 
     <!-- Hero Section -->
@@ -102,23 +92,23 @@
         <div class="w-full lg:w-1/2 z-10 space-y-6 text-left">
             <div class="inline-flex items-center gap-2 bg-pastelYellow/70 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide text-pastelBrown border border-accentWarm/30">
                 <span class="w-2 h-2 rounded-full bg-accentWarm animate-pulse"></span>
-                Disponible para nuevos proyectos
+                Coordinador de Mantenimiento · TI · Redes
             </div>
             
             <h1 class="serif-title text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-pastelBrown leading-[1.1]">
-                Hi, my name is <span class="text-accentWarm underline decoration-pastelYellow decoration-4 underline-offset-8">Yeferson</span>.
+                Hola, soy <span class="text-accentWarm underline decoration-pastelYellow decoration-4 underline-offset-8">Yeferson</span>.
             </h1>
             
             <p class="text-base sm:text-lg text-pastelMuted max-w-lg leading-relaxed font-normal">
-                I'm an <strong class="text-pastelBrown font-semibold">independent creative developer</strong> crafting bespoke digital experiences with warmth, clean code, and intuitive design.
+                Ingeniería de Sistemas <strong class="text-pastelBrown font-semibold">en proceso de grado</strong> y Tecnólogo en Desarrollo Informático. Experiencia en mantenimiento, soporte TI, redes, cableado estructurado, automatización de pruebas y gestión de infraestructura.
             </p>
 
             <div class="flex flex-wrap items-center gap-4 pt-4">
                 <a href="#projects" class="bg-pastelBrown text-pastelBg hover:bg-pastelMuted px-7 py-3.5 rounded-full font-medium text-sm transition-all shadow-md shadow-pastelBrown/10 flex items-center gap-2">
-                    <span>Ver Proyectos</span>
+                    <span>Ver Experiencia</span>
                     <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
-                <a href="#contact" class="bg-pastelCard hover:bg-pastelYellow text-pastelBrown border border-pastelMuted/20 px-7 py-3.5 rounded-full font-medium text-sm transition-all">
+                <a href="#connect" class="bg-pastelCard hover:bg-pastelYellow text-pastelBrown border border-pastelMuted/20 px-7 py-3.5 rounded-full font-medium text-sm transition-all">
                     Contáctame
                 </a>
             </div>
@@ -126,56 +116,91 @@
 
         <!-- Custom Adapted Avatar Illustration (Curly hair, smile, black jacket based on photo) -->
         <div class="w-full lg:w-1/2 mt-12 lg:mt-0 flex justify-center relative">
-            <div class="absolute w-72 h-72 sm:w-96 sm:h-96 bg-stripes rounded-3xl -z-10 rotate-3 border border-pastelMuted/10"></div>
-            
             <div class="w-full max-w-[420px] relative">
-                <svg viewBox="0 0 400 450" class="w-full h-auto drop-shadow-xl" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="200" cy="225" r="160" fill="#FCEFC7" opacity="0.6"/>
-                    
-                    <!-- Black Leather Jacket & White T-Shirt (from reference photo) -->
-                    <path d="M90 430 C90 355, 130 330, 200 330 C270 330, 310 355, 310 430 Z" fill="#222222" stroke="#5C4A42" stroke-width="4" stroke-linejoin="round"/>
-                    <path d="M140 370 L180 450 L220 450 L260 370 Z" fill="#222222"/>
-                    <!-- White T-Shirt Collar inside jacket -->
-                    <path d="M165 365 Q200 410 235 365 L220 355 Q200 380 180 355 Z" fill="#FDFBF7" stroke="#5C4A42" stroke-width="3"/>
-                    <!-- Jacket Lapels -->
-                    <path d="M135 340 L165 425" fill="none" stroke="#444444" stroke-width="5" stroke-linecap="round"/>
-                    <path d="M265 340 L235 425" fill="none" stroke="#444444" stroke-width="5" stroke-linecap="round"/>
+                <!-- Fondo con rayas, centrado detras del avatar -->
+                <div class="absolute inset-x-8 top-6 bottom-6 bg-stripes rounded-3xl -z-10 rotate-3 border border-pastelMuted/10"></div>
 
-                    <!-- Ears -->
-                    <circle cx="118" cy="235" r="20" fill="#F2D3C2" stroke="#5C4A42" stroke-width="4"/>
-                    <circle cx="282" cy="235" r="20" fill="#F2D3C2" stroke="#5C4A42" stroke-width="4"/>
+                <svg viewBox="0 0 400 400" class="w-full h-auto block drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar de Yeferson">
+                    <defs>
+                        <clipPath id="avatarClip"><circle cx="200" cy="200" r="184"/></clipPath>
+                        <radialGradient id="avatarGlow" cx="50%" cy="42%" r="60%">
+                            <stop offset="0%" stop-color="#FCEFC7"/>
+                            <stop offset="100%" stop-color="#F7F2EB"/>
+                        </radialGradient>
+                    </defs>
 
-                    <!-- Face / Head Shape -->
-                    <rect x="132" y="145" width="136" height="165" rx="68" fill="#F2D3C2" stroke="#5C4A42" stroke-width="4"/>
+                    <!-- Marco circular -->
+                    <circle cx="200" cy="200" r="190" fill="url(#avatarGlow)" stroke="#8C7A72" stroke-opacity="0.25" stroke-width="3"/>
 
-                    <!-- Curly Dark Hair (Based on reference photo) -->
-                    <path d="M125 185 C110 130, 140 85, 200 85 C260 85, 290 130, 275 185 C290 150, 285 100, 245 75 C205 50, 150 65, 130 95 C115 115, 120 150, 125 185 Z" fill="#2A2A2A" stroke="#5C4A42" stroke-width="3"/>
-                    <!-- Curls texture -->
-                    <circle cx="145" cy="85" r="14" fill="#2A2A2A" stroke="#5C4A42" stroke-width="2"/>
-                    <circle cx="170" cy="72" r="16" fill="#2A2A2A" stroke="#5C4A42" stroke-width="2"/>
-                    <circle cx="205" cy="68" r="18" fill="#2A2A2A" stroke="#5C4A42" stroke-width="2"/>
-                    <circle cx="240" cy="76" r="16" fill="#2A2A2A" stroke="#5C4A42" stroke-width="2"/>
-                    <circle cx="265" cy="98" r="14" fill="#2A2A2A" stroke="#5C4A42" stroke-width="2"/>
-                    <circle cx="125" cy="120" r="15" fill="#2A2A2A" stroke="#5C4A42" stroke-width="2"/>
-                    <circle cx="278" cy="125" r="15" fill="#2A2A2A" stroke="#5C4A42" stroke-width="2"/>
+                    <g clip-path="url(#avatarClip)" stroke="#5C4A42" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
 
-                    <!-- Friendly Expressive Eyebrows -->
-                    <path d="M152 192 Q170 182 188 192" fill="none" stroke="#2A2A2A" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M212 192 Q230 182 248 192" fill="none" stroke="#2A2A2A" stroke-width="4" stroke-linecap="round"/>
+                        <!-- Chaqueta -->
+                        <path d="M30 410 C40 345 105 318 176 316 L224 316 C295 318 360 345 370 410 Z" fill="#EFC89B"/>
 
-                    <!-- Expressive Eyes -->
-                    <circle cx="170" cy="212" r="11" fill="#2A2A2A"/>
-                    <circle cx="230" cy="212" r="11" fill="#2A2A2A"/>
-                    <circle cx="173" cy="209" r="3.5" fill="#FFFFFF"/>
-                    <circle cx="233" cy="209" r="3.5" fill="#FFFFFF"/>
+                        <!-- Camiseta blanca -->
+                        <path d="M164 312 L176 318 Q200 342 224 318 L236 312 L244 410 L156 410 Z" fill="#FDFBF7"/>
 
-                    <!-- Natural Nose -->
-                    <path d="M200 216 Q190 242 204 246 Q210 246 210 240" fill="none" stroke="#5C4A42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <!-- Cuello -->
+                        <path d="M177 255 L177 318 Q200 342 223 318 L223 255 Z" fill="#E9C4B0"/>
 
-                    <!-- Cheeks / Warm Smile -->
-                    <path d="M172 278 Q200 300 228 278" fill="none" stroke="#5C4A42" stroke-width="4" stroke-linecap="round"/>
-                    <circle cx="155" cy="240" r="12" fill="#E8A598" opacity="0.4"/>
-                    <circle cx="245" cy="240" r="12" fill="#E8A598" opacity="0.4"/>
+                        <!-- Solapas del cuello de la chaqueta -->
+                        <path d="M176 318 L150 286 Q134 296 118 314 L150 352 Z" fill="#EFC89B"/>
+                        <path d="M224 318 L250 286 Q266 296 282 314 L250 352 Z" fill="#EFC89B"/>
+                        <circle cx="158" cy="332" r="4.5" fill="#5C4A42" stroke="none"/>
+                        <path d="M150 352 L142 410 M250 352 L258 410" fill="none"/>
+
+                        <!-- Orejas -->
+                        <ellipse cx="148" cy="214" rx="13" ry="17" fill="#F2D3C2"/>
+                        <ellipse cx="252" cy="214" rx="13" ry="17" fill="#F2D3C2"/>
+
+                        <!-- Cara -->
+                        <rect x="148" y="135" width="104" height="152" rx="52" fill="#F2D3C2"/>
+                        <!-- Sombra bajo la barbilla -->
+                        <path d="M178 276 Q200 292 222 276" fill="none" stroke="#D9AE97" stroke-width="6" opacity="0.7"/>
+
+                        <!-- Pelo rizado: contorno de rizos -->
+                        <g fill="#2A2A2A" stroke-width="3">
+                            <circle cx="143" cy="192" r="10"/>
+                            <circle cx="138" cy="168" r="13"/>
+                            <circle cx="146" cy="145" r="15"/>
+                            <circle cx="163" cy="127" r="16"/>
+                            <circle cx="187" cy="118" r="17"/>
+                            <circle cx="212" cy="118" r="16"/>
+                            <circle cx="236" cy="125" r="15"/>
+                            <circle cx="254" cy="143" r="14"/>
+                            <circle cx="262" cy="167" r="13"/>
+                            <circle cx="257" cy="192" r="10"/>
+                        </g>
+                        <!-- Masa del pelo -->
+                        <path d="M147 205 C140 166 156 128 200 126 C244 128 260 166 253 205 C250 184 242 169 222 162 C200 167 175 160 157 181 C152 190 149 198 147 205 Z" fill="#2A2A2A" stroke="none"/>
+                        <!-- Textura de rizos -->
+                        <g fill="none" stroke="#8C7A72" stroke-width="2.5" opacity="0.8">
+                            <path d="M172 141 q8 -9 17 -2 q5 6 -2 11"/>
+                            <path d="M210 138 q9 -7 17 0 q4 7 -3 11"/>
+                        </g>
+
+                        <!-- Cejas -->
+                        <path d="M164 193 Q176 184 191 190" fill="none" stroke-width="4"/>
+                        <path d="M209 190 Q224 184 237 193" fill="none" stroke-width="4"/>
+
+                        <!-- Ojos -->
+                        <path d="M167 206 Q177 199 187 206" fill="none" stroke-width="3"/>
+                        <path d="M213 206 Q223 199 233 206" fill="none" stroke-width="3"/>
+                        <circle cx="177" cy="209" r="5" fill="#3B2F2A" stroke="none"/>
+                        <circle cx="223" cy="209" r="5" fill="#3B2F2A" stroke="none"/>
+                        <circle cx="178.5" cy="207.5" r="1.6" fill="#FFFFFF" stroke="none"/>
+                        <circle cx="224.5" cy="207.5" r="1.6" fill="#FFFFFF" stroke="none"/>
+
+                        <!-- Nariz -->
+                        <path d="M202 214 Q209 231 198 236 Q204 240 212 236" fill="none" stroke-width="3"/>
+
+                        <!-- Mejillas -->
+                        <circle cx="163" cy="243" r="12" fill="#E8A598" opacity="0.4" stroke="none"/>
+                        <circle cx="237" cy="243" r="12" fill="#E8A598" opacity="0.4" stroke="none"/>
+
+                        <!-- Sonrisa -->
+                        <path d="M170 253 Q200 264 230 253 Q222 281 200 281 Q178 281 170 253 Z" fill="#FDFBF7" stroke-width="3"/>
+                    </g>
                 </svg>
             </div>
         </div>
@@ -184,7 +209,7 @@
 
     <!-- Scroll Indicator -->
     <div class="w-full pb-10 flex flex-col items-center justify-center text-pastelMuted/60 gap-2">
-        <span class="text-xs uppercase tracking-widest font-semibold">Scroll</span>
+        <span class="text-xs uppercase tracking-widest font-semibold">Desliza</span>
         <div class="w-4 h-8 rounded-full border-2 border-pastelMuted/30 flex items-start justify-center p-1">
             <div class="w-1 h-2 bg-pastelMuted rounded-full animate-bounce"></div>
         </div>
@@ -195,206 +220,255 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
                 <span class="text-xs font-semibold uppercase tracking-wider text-accentWarm block">Sobre mí</span>
-                <h2 class="serif-title text-3xl sm:text-4xl font-bold text-pastelBrown">Apasionado por la tecnología, el diseño limpio y la música</h2>
+                <h2 class="serif-title text-3xl sm:text-4xl font-bold text-pastelBrown">Soporte, infraestructura y automatización para una operación confiable</h2>
                 <p class="text-sm sm:text-base text-pastelMuted leading-relaxed">
-                    Soy un desarrollador independiente con debilidad por los detalles estéticos y la funcionalidad fluida. Me encanta transformar ideas complejas en experiencias web amigables, cálidas y memorables.
+                    Soy estudiante de <strong class="text-pastelBrown font-semibold">Ingeniería de Sistemas, en proceso de grado</strong>, y <strong class="text-pastelBrown font-semibold">Tecnólogo en Desarrollo Informático</strong>. Mi experiencia combina mantenimiento de sistemas de control de acceso y equipos automatizados, infraestructura de redes, cableado estructurado, soporte en sitio, gestión de activos TI y automatización de pruebas con Selenium WebDriver.
                 </p>
                 <div class="grid grid-cols-2 gap-4 pt-4">
                     <div class="bg-pastelCard p-4 rounded-2xl border border-pastelMuted/10">
-                        <span class="serif-title font-bold text-2xl text-pastelBrown block">+3 Años</span>
-                        <span class="text-xs text-pastelMuted">Experiencia en Desarrollo</span>
+                        <span class="serif-title font-bold text-2xl text-pastelBrown block">TI + Redes</span>
+                        <span class="text-xs text-pastelMuted">Soporte e infraestructura</span>
                     </div>
                     <div class="bg-pastelCard p-4 rounded-2xl border border-pastelMuted/10">
-                        <span class="serif-title font-bold text-2xl text-pastelBrown block">+25</span>
-                        <span class="text-xs text-pastelMuted">Proyectos Exitosos</span>
+                        <span class="serif-title font-bold text-2xl text-pastelBrown block">Python</span>
+                        <span class="text-xs text-pastelMuted">Automatización y desarrollo</span>
                     </div>
                 </div>
             </div>
             <div class="bg-pastelCard p-8 rounded-3xl border border-pastelMuted/15 shadow-sm space-y-4">
-                <h3 class="serif-title text-xl font-bold text-pastelBrown">Mi filosofía de trabajo</h3>
+                <h3 class="serif-title text-xl font-bold text-pastelBrown">Mi forma de trabajar</h3>
                 <p class="text-sm text-pastelMuted leading-relaxed">
-                    Creo firmemente que el software no solo debe ser eficiente y rápido, sino también transmitir personalidad y calidez humana. Cada línea de código está pensada para perdurar y ofrecer una interacción agradable.
+                    Me enfoco en diagnosticar causas, resolver incidentes y dejar trazabilidad de cada intervención. Combino soporte técnico, mantenimiento preventivo y correctivo, administración de infraestructura y automatización para contribuir a la continuidad del servicio.
                 </p>
-                <div class="flex items-center gap-3 pt-2">
-                    <span class="bg-pastelYellow text-pastelBrown text-xs font-semibold px-3 py-1.5 rounded-full">Creativo</span>
-                    <span class="bg-pastelSkin/60 text-pastelBrown text-xs font-semibold px-3 py-1.5 rounded-full">Detallista</span>
-                    <span class="bg-pastelYellow text-pastelBrown text-xs font-semibold px-3 py-1.5 rounded-full">Innovador</span>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                    <span class="bg-pastelYellow text-pastelBrown text-xs font-semibold px-3 py-1.5 rounded-full">Soporte TI</span>
+                    <span class="bg-pastelSkin/60 text-pastelBrown text-xs font-semibold px-3 py-1.5 rounded-full">Infraestructura</span>
+                    <span class="bg-pastelYellow text-pastelBrown text-xs font-semibold px-3 py-1.5 rounded-full">Automatización</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Experience Section -->
     <section id="projects" class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-20 border-t border-pastelMuted/10">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
-                <span class="text-xs font-semibold uppercase tracking-wider text-accentWarm block mb-2">Selected Works</span>
-                <h2 class="serif-title text-3xl sm:text-4xl font-bold text-pastelBrown">Proyectos Recientes</h2>
+                <span class="text-xs font-semibold uppercase tracking-wider text-accentWarm block mb-2">Experiencia laboral</span>
+                <h2 class="serif-title text-3xl sm:text-4xl font-bold text-pastelBrown">Trayectoria profesional</h2>
             </div>
             <p class="text-pastelMuted max-w-sm mt-3 md:mt-0 text-sm">
-                Una selección de trabajos desarrollados con atención al detalle, rendimiento y diseño limpio.
+                Experiencia en mantenimiento, soporte TI, infraestructura de redes, gestión de activos y automatización de pruebas.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Project 1 -->
-            <div class="bg-pastelCard rounded-3xl p-6 border border-pastelMuted/15 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-full h-48 rounded-2xl bg-pastelYellow/50 border border-pastelYellow flex items-center justify-center mb-6 overflow-hidden relative group-hover:bg-pastelYellow transition-colors">
-                        <div class="absolute inset-0 bg-stripes opacity-30"></div>
-                        <i class="fa-solid fa-cloud-sun text-4xl text-accentWarm group-hover:scale-110 transition-transform"></i>
-                        <span class="absolute top-3 right-3 bg-pastelBg/80 backdrop-blur-sm text-xs px-3 py-1 rounded-full font-medium text-pastelBrown">Web App</span>
+        <div class="space-y-6">
+            <!-- Inmotika -->
+            <article class="bg-pastelCard rounded-3xl p-6 sm:p-8 border border-pastelMuted/15 hover:shadow-lg transition-all duration-300">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-5">
+                    <div>
+                        <span class="text-xs font-semibold text-accentWarm uppercase tracking-wide">Actualidad</span>
+                        <h3 class="serif-title text-2xl font-bold text-pastelBrown mt-1">Coordinador de Mantenimiento</h3>
+                        <p class="text-sm font-semibold text-pastelBrown mt-1">Inmotika S.A.S</p>
                     </div>
-                    <span class="text-xs font-semibold text-accentWarm uppercase tracking-wide">React & Tailwind</span>
-                    <h3 class="serif-title text-xl font-bold text-pastelBrown mt-1 mb-2">Aura Weather Dashboard</h3>
-                    <p class="text-sm text-pastelMuted leading-relaxed">
-                        Aplicación meteorológica minimalista con pronósticos en tiempo real y gráficos suaves interactivos.
-                    </p>
+                    <span class="inline-flex w-fit bg-pastelYellow text-pastelBrown text-xs font-semibold px-3 py-1.5 rounded-full">17/09/2025 — Actualidad</span>
                 </div>
-                <div class="pt-6 mt-6 border-t border-pastelMuted/10 flex items-center justify-between">
-                    <span class="text-xs font-medium text-pastelBrown">2026</span>
-                    <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-pastelBrown hover:text-accentWarm transition-colors">
-                        <span>Ver detalles</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                    </a>
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-3 text-sm text-pastelMuted">
+                    <p><i class="fa-solid fa-check text-accentWarm mr-2"></i>Mantenimiento preventivo y correctivo de sistemas de control de acceso y equipos automatizados.</p>
+                    <p><i class="fa-solid fa-check text-accentWarm mr-2"></i>Diseño, tendido y certificación de cableado estructurado.</p>
+                    <p><i class="fa-solid fa-check text-accentWarm mr-2"></i>Configuración, administración y soporte técnico de infraestructura de redes.</p>
+                    <p><i class="fa-solid fa-check text-accentWarm mr-2"></i>Diagnóstico y resolución de incidentes técnicos operativos y de configuración.</p>
+                    <p class="md:col-span-2"><i class="fa-solid fa-check text-accentWarm mr-2"></i>Gestión y cierre de casos técnicos, garantizando continuidad del servicio y trazabilidad de las intervenciones.</p>
+                </div>
+            </article>
+
+            <!-- Sistemlog -->
+            <article class="bg-pastelCard rounded-3xl p-6 sm:p-8 border border-pastelMuted/15 hover:shadow-lg transition-all duration-300">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-5">
+                    <div>
+                        <span class="text-xs font-semibold text-accentWarm uppercase tracking-wide">Soporte técnico</span>
+                        <h3 class="serif-title text-2xl font-bold text-pastelBrown mt-1">Técnico de Soporte y Alistamiento de Equipos</h3>
+                        <p class="text-sm font-semibold text-pastelBrown mt-1">SistemlogSAS</p>
+                    </div>
+                    <span class="inline-flex w-fit bg-pastelSkin/60 text-pastelBrown text-xs font-semibold px-3 py-1.5 rounded-full">02/07/2025 — 22/08/2025</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-3 text-sm text-pastelMuted">
+                    <p><i class="fa-solid fa-check text-accentWarm mr-2"></i>Instalación, configuración y pruebas de funcionamiento para el alistamiento de equipos de cómputo.</p>
+                    <p><i class="fa-solid fa-check text-accentWarm mr-2"></i>Diagnóstico técnico y resolución de incidentes de hardware y software.</p>
+                    <p class="md:col-span-2"><i class="fa-solid fa-check text-accentWarm mr-2"></i>Entrega operativa de equipos y capacitación básica a usuarios finales.</p>
+                </div>
+            </article>
+
+            <!-- COMWARE -->
+            <article class="bg-pastelCard rounded-3xl p-6 sm:p-8 border border-pastelMuted/15 hover:shadow-lg transition-all duration-300">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-5">
+                    <div>
+                        <span class="text-xs font-semibold text-accentWarm uppercase tracking-wide">Soporte en sitio · Activos TI</span>
+                        <h3 class="serif-title text-2xl font-bold text-pastelBrown mt-1">Soporte en Sitio y Gestor de Activos</h3>
+                        <p class="text-sm font-semibold text-pastelBrown mt-1">COMWARE</p>
+                    </div>
+                    <span class="inline-flex w-fit bg-pastelYellow text-pastelBrown text-xs font-semibold px-3 py-1.5 rounded-full">12/08/2024 — 01/07/2025</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-3 text-sm text-pastelMuted">
+                    <p><i class="fa-solid fa-check text-accentWarm mr-2"></i>Gestión, categorización y priorización de incidentes mediante Proactivanet.</p>
+                    <p><i class="fa-solid fa-check text-accentWarm mr-2"></i>Administración de usuarios, políticas de seguridad y accesos en Active Directory.</p>
+                    <p><i class="fa-solid fa-check text-accentWarm mr-2"></i>Actualización de la CMDB y control del ciclo de vida de hardware.</p>
+                    <p><i class="fa-solid fa-check text-accentWarm mr-2"></i>Soporte en la gestión de cambios.</p>
+                    <p class="md:col-span-2"><i class="fa-solid fa-check text-accentWarm mr-2"></i>Generación de documentación técnica para garantizar la continuidad operativa.</p>
+                </div>
+            </article>
+
+            <!-- DIGITAL WARE -->
+            <article class="bg-pastelCard rounded-3xl p-6 sm:p-8 border border-pastelMuted/15 hover:shadow-lg transition-all duration-300">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-5">
+                    <div>
+                        <span class="text-xs font-semibold text-accentWarm uppercase tracking-wide">QA · Automatización</span>
+                        <h3 class="serif-title text-2xl font-bold text-pastelBrown mt-1">Automatizador de Pruebas y QA</h3>
+                        <p class="text-sm font-semibold text-pastelBrown mt-1">DIGITAL WARE</p>
+                    </div>
+                    <span class="inline-flex w-fit bg-pastelSkin/60 text-pastelBrown text-xs font-semibold px-3 py-1.5 rounded-full">22/01/2024 — 22/07/2024</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-3 text-sm text-pastelMuted">
+                    <p><i class="fa-solid fa-check text-accentWarm mr-2"></i>Desarrollo, ejecución y mantenimiento de scripts de automatización para aplicaciones web con Selenium WebDriver.</p>
+                    <p><i class="fa-solid fa-check text-accentWarm mr-2"></i>Validación de elementos dinámicos y cobertura de pruebas funcionales en flujos complejos.</p>
+                    <p class="md:col-span-2"><i class="fa-solid fa-check text-accentWarm mr-2"></i>Mantenimiento y actualización del código de pruebas conforme a los ciclos de iteración del software.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education" class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-20 border-t border-pastelMuted/10">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-semibold uppercase tracking-wider text-accentWarm block mb-2">Formación</span>
+            <h2 class="serif-title text-3xl sm:text-4xl font-bold text-pastelBrown">Educación y certificaciones</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+            <div class="bg-pastelCard rounded-3xl p-7 border border-pastelMuted/15">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-11 h-11 rounded-2xl bg-pastelYellow flex items-center justify-center text-accentWarm">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="serif-title text-xl font-bold text-pastelBrown">Educación</h3>
+                </div>
+                <div class="space-y-6">
+                    <div class="border-l-2 border-accentWarm pl-4">
+                        <h4 class="font-bold text-pastelBrown">Ingeniería en Sistemas</h4>
+                        <p class="text-sm text-pastelMuted mt-1">Universidad ECCI · 2021 — Actualidad</p>
+                        <span class="inline-block mt-2 text-xs font-semibold bg-pastelYellow text-pastelBrown px-2.5 py-1 rounded-full">En proceso de grado</span>
+                    </div>
+                    <div class="border-l-2 border-pastelSkin pl-4">
+                        <h4 class="font-bold text-pastelBrown">Tecnología en Desarrollo Informático</h4>
+                        <p class="text-sm text-pastelMuted mt-1">Universidad ECCI · 2021 — Culminado</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="bg-pastelCard rounded-3xl p-6 border border-pastelMuted/15 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-full h-48 rounded-2xl bg-pastelSkin/40 border border-pastelSkin flex items-center justify-center mb-6 overflow-hidden relative group-hover:bg-pastelSkin/70 transition-colors">
-                        <div class="absolute inset-0 bg-stripes opacity-30"></div>
-                        <i class="fa-solid fa-book-open text-4xl text-pastelBrown group-hover:scale-110 transition-transform"></i>
-                        <span class="absolute top-3 right-3 bg-pastelBg/80 backdrop-blur-sm text-xs px-3 py-1 rounded-full font-medium text-pastelBrown">E-commerce</span>
+            <div class="bg-pastelCard rounded-3xl p-7 border border-pastelMuted/15">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-11 h-11 rounded-2xl bg-pastelSkin/60 flex items-center justify-center text-pastelBrown">
+                        <i class="fa-solid fa-certificate"></i>
                     </div>
-                    <span class="text-xs font-semibold text-accentWarm uppercase tracking-wide">Next.js & Node</span>
-                    <h3 class="serif-title text-xl font-bold text-pastelBrown mt-1 mb-2">Botanical Bookstore</h3>
-                    <p class="text-sm text-pastelMuted leading-relaxed">
-                        Plataforma de comercio electrónico especializada en literatura de botánica con pasarela de pago segura.
-                    </p>
+                    <h3 class="serif-title text-xl font-bold text-pastelBrown">Certificaciones</h3>
                 </div>
-                <div class="pt-6 mt-6 border-t border-pastelMuted/10 flex items-center justify-between">
-                    <span class="text-xs font-medium text-pastelBrown">2025</span>
-                    <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-pastelBrown hover:text-accentWarm transition-colors">
-                        <span>Ver detalles</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                    </a>
+                <div class="space-y-4">
+                    <div class="p-4 rounded-2xl bg-pastelBg border border-pastelMuted/10">
+                        <h4 class="font-bold text-pastelBrown">Hacker ético</h4>
+                        <p class="text-xs text-pastelMuted mt-1">Cisco Networking Academy</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-pastelBg border border-pastelMuted/10">
+                        <h4 class="font-bold text-pastelBrown">CyberOps Associate</h4>
+                        <p class="text-xs text-pastelMuted mt-1">Cisco Networking Academy</p>
+                    </div>
                 </div>
             </div>
-
-            <!-- Project 3 -->
-            <div class="bg-pastelCard rounded-3xl p-6 border border-pastelMuted/15 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-full h-48 rounded-2xl bg-pastelYellow/50 border border-pastelYellow flex items-center justify-center mb-6 overflow-hidden relative group-hover:bg-pastelYellow transition-colors">
-                        <div class="absolute inset-0 bg-stripes opacity-30"></div>
-                        <i class="fa-solid fa-feather text-4xl text-accentWarm group-hover:scale-110 transition-transform"></i>
-                        <span class="absolute top-3 right-3 bg-pastelBg/80 backdrop-blur-sm text-xs px-3 py-1 rounded-full font-medium text-pastelBrown">UI / UX</span>
-                    </div>
-                    <span class="text-xs font-semibold text-accentWarm uppercase tracking-wide">Design System</span>
-                    <h3 class="serif-title text-xl font-bold text-pastelBrown mt-1 mb-2">Serena UI Library</h3>
-                    <p class="text-sm text-pastelMuted leading-relaxed">
-                        Laboratorio de componentes de interfaz basados en paletas cálidas y tipografías editoriales limpias.
-                    </p>
-                </div>
-                <div class="pt-6 mt-6 border-t border-pastelMuted/10 flex items-center justify-between">
-                    <span class="text-xs font-medium text-pastelBrown">2025</span>
-                    <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-pastelBrown hover:text-accentWarm transition-colors">
-                        <span>Ver detalles</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                    </a>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 border-t border-pastelMuted/10">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-xs font-semibold uppercase tracking-wider text-accentWarm block mb-2">Expertise</span>
-            <h2 class="serif-title text-3xl sm:text-4xl font-bold text-pastelBrown">Habilidades & Tecnologías</h2>
+    <section id="skills" class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-20 border-t border-pastelMuted/10">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-semibold uppercase tracking-wider text-accentWarm block mb-2">Perfil técnico</span>
+            <h2 class="serif-title text-3xl sm:text-4xl font-bold text-pastelBrown">Habilidades y tecnologías</h2>
+            <p class="text-sm text-pastelMuted mt-4">Herramientas y conocimientos incluidos en mi perfil profesional.</p>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div class="bg-pastelCard p-6 rounded-2xl border border-pastelMuted/10 text-center hover:bg-pastelYellow/30 transition-colors">
-                <i class="fa-brands fa-react text-3xl text-accentWarm mb-3"></i>
-                <h4 class="font-bold text-pastelBrown text-sm">React & Next.js</h4>
-                <p class="text-xs text-pastelMuted mt-1">Frontend Avanzado</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="bg-pastelCard p-6 rounded-2xl border border-pastelMuted/10">
+                <i class="fa-solid fa-code text-2xl text-accentWarm mb-4"></i>
+                <h4 class="font-bold text-pastelBrown">Desarrollo e Ingeniería</h4>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Python</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Selenium WebDriver</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Git</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">GitHub</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Azure DevOps</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Visual Studio Code</span>
+                </div>
             </div>
-            <div class="bg-pastelCard p-6 rounded-2xl border border-pastelMuted/10 text-center hover:bg-pastelYellow/30 transition-colors">
-                <i class="fa-solid fa-palette text-3xl text-accentWarm mb-3"></i>
-                <h4 class="font-bold text-pastelBrown text-sm">Tailwind & CSS</h4>
-                <p class="text-xs text-pastelMuted mt-1">Diseño Responsivo</p>
+
+            <div class="bg-pastelCard p-6 rounded-2xl border border-pastelMuted/10">
+                <i class="fa-solid fa-network-wired text-2xl text-accentWarm mb-4"></i>
+                <h4 class="font-bold text-pastelBrown">Infraestructura y Redes</h4>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Kubernetes</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Docker</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">VirtualBox</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Active Directory</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Cableado Estructurado</span>
+                </div>
             </div>
-            <div class="bg-pastelCard p-6 rounded-2xl border border-pastelMuted/10 text-center hover:bg-pastelYellow/30 transition-colors">
-                <i class="fa-brands fa-node-js text-3xl text-accentWarm mb-3"></i>
-                <h4 class="font-bold text-pastelBrown text-sm">Node.js & APIs</h4>
-                <p class="text-xs text-pastelMuted mt-1">Backend & Servicios</p>
+
+            <div class="bg-pastelCard p-6 rounded-2xl border border-pastelMuted/10">
+                <i class="fa-solid fa-diagram-project text-2xl text-accentWarm mb-4"></i>
+                <h4 class="font-bold text-pastelBrown">Marcos de Trabajo</h4>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Agile</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Scrum</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">EVM</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">PESTEL</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">SWOT</span>
+                </div>
             </div>
-            <div class="bg-pastelCard p-6 rounded-2xl border border-pastelMuted/10 text-center hover:bg-pastelYellow/30 transition-colors">
-                <i class="fa-solid fa-pen-nib text-3xl text-accentWarm mb-3"></i>
-                <h4 class="font-bold text-pastelBrown text-sm">UI/UX Design</h4>
-                <p class="text-xs text-pastelMuted mt-1">Figma & Prototipos</p>
+
+            <div class="bg-pastelCard p-6 rounded-2xl border border-pastelMuted/10">
+                <i class="fa-solid fa-toolbox text-2xl text-accentWarm mb-4"></i>
+                <h4 class="font-bold text-pastelBrown">Herramientas y otros</h4>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Microsoft 365</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Excel Avanzado</span>
+                    <span class="text-xs bg-pastelBg px-2.5 py-1.5 rounded-full">Inglés · Intermedio</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="w-full max-w-4xl mx-auto px-6 sm:px-12 py-20">
+    <!-- Connect Section -->
+    <section id="connect" class="w-full max-w-5xl mx-auto px-6 sm:px-12 py-20">
         <div class="bg-pastelCard rounded-3xl p-8 sm:p-12 border border-pastelMuted/15 shadow-sm text-center relative overflow-hidden">
             <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-pastelYellow rounded-full opacity-50 pointer-events-none"></div>
-            
-            <span class="text-xs font-semibold uppercase tracking-wider text-accentWarm block mb-2">Get in touch</span>
-            <h2 class="serif-title text-3xl sm:text-4xl font-bold text-pastelBrown mb-4">¿Trabajamos juntos?</h2>
-            <p class="text-sm sm:text-base text-pastelMuted max-w-md mx-auto mb-8">
-                Estoy disponible para nuevos proyectos freelance o colaboraciones creativas. ¡Escríbeme!
-            </p>
-
-            <form onsubmit="handleFormSubmit(event)" class="max-w-md mx-auto space-y-4 text-left">
-                <div>
-                    <label class="block text-xs font-semibold text-pastelBrown mb-1">Tu Nombre</label>
-                    <input type="text" required placeholder="Ej. Yeferson" class="w-full bg-pastelBg border border-pastelMuted/20 rounded-xl px-4 py-3 text-sm text-pastelBrown focus:outline-none focus:border-accentWarm transition-colors">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-pastelBrown mb-1">Correo Electrónico</label>
-                    <input type="email" required placeholder="yeferson@example.com" class="w-full bg-pastelBg border border-pastelMuted/20 rounded-xl px-4 py-3 text-sm text-pastelBrown focus:outline-none focus:border-accentWarm transition-colors">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-pastelBrown mb-1">Mensaje</label>
-                    <textarea rows="4" required placeholder="Cuéntame sobre tu proyecto..." class="w-full bg-pastelBg border border-pastelMuted/20 rounded-xl px-4 py-3 text-sm text-pastelBrown focus:outline-none focus:border-accentWarm transition-colors"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-pastelBrown hover:bg-pastelMuted text-pastelBg font-medium py-3.5 rounded-xl text-sm transition-all shadow-md">
-                    Enviar Mensaje
-                </button>
-            </form>
+            <div class="absolute -left-12 -top-12 w-32 h-32 bg-pastelSkin/40 rounded-full pointer-events-none"></div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-accentWarm block mb-2">Contacto & enlaces</span>
+            <h2 class="serif-title text-3xl sm:text-4xl font-bold text-pastelBrown mb-4">Conecta conmigo</h2>
+            <p class="text-sm sm:text-base text-pastelMuted max-w-xl mx-auto mb-2">Puedes encontrarme en mis principales canales profesionales. Estoy abierto a oportunidades relacionadas con soporte TI, infraestructura, redes, automatización de pruebas y desarrollo tecnológico.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left relative z-10">
+                <a href="https://github.com/YefersonCJ" target="_blank" rel="noopener noreferrer" class="group bg-pastelBg rounded-2xl p-5 border border-pastelMuted/15 hover:border-accentWarm/50 hover:-translate-y-1 transition-all"><div class="flex items-center gap-4"><div class="w-11 h-11 rounded-xl bg-pastelCard flex items-center justify-center text-pastelBrown group-hover:bg-pastelYellow transition-colors"><i class="fa-brands fa-github text-xl"></i></div><div><span class="text-xs uppercase tracking-wider text-pastelMuted">Código</span><h3 class="font-semibold text-pastelBrown">GitHub</h3></div></div><p class="text-xs text-pastelMuted mt-3">Proyectos, automatización y desarrollo.</p></a>
+                <a href="https://www.linkedin.com/in/yeferson-camilo-jimenez-camargo-aa5b12320" target="_blank" rel="noopener noreferrer" class="group bg-pastelBg rounded-2xl p-5 border border-pastelMuted/15 hover:border-accentWarm/50 hover:-translate-y-1 transition-all"><div class="flex items-center gap-4"><div class="w-11 h-11 rounded-xl bg-pastelCard flex items-center justify-center text-pastelBrown group-hover:bg-pastelYellow transition-colors"><i class="fa-brands fa-linkedin-in text-xl"></i></div><div><span class="text-xs uppercase tracking-wider text-pastelMuted">Profesional</span><h3 class="font-semibold text-pastelBrown">LinkedIn</h3></div></div><p class="text-xs text-pastelMuted mt-3">Perfil profesional y trayectoria.</p></a>
+                <a href="mailto:Yeferson.camilo@outlook.com" class="group bg-pastelBg rounded-2xl p-5 border border-pastelMuted/15 hover:border-accentWarm/50 hover:-translate-y-1 transition-all"><div class="flex items-center gap-4"><div class="w-11 h-11 rounded-xl bg-pastelCard flex items-center justify-center text-pastelBrown group-hover:bg-pastelYellow transition-colors"><i class="fa-regular fa-envelope text-xl"></i></div><div><span class="text-xs uppercase tracking-wider text-pastelMuted">Email</span><h3 class="font-semibold text-pastelBrown">Correo electrónico</h3></div></div><p class="text-xs text-pastelMuted mt-3">Yeferson.camilo@outlook.com</p></a>
+                <a href="tel:+573188885342" class="group bg-pastelBg rounded-2xl p-5 border border-pastelMuted/15 hover:border-accentWarm/50 hover:-translate-y-1 transition-all"><div class="flex items-center gap-4"><div class="w-11 h-11 rounded-xl bg-pastelCard flex items-center justify-center text-pastelBrown group-hover:bg-pastelYellow transition-colors"><i class="fa-solid fa-phone text-lg"></i></div><div><span class="text-xs uppercase tracking-wider text-pastelMuted">Contacto</span><h3 class="font-semibold text-pastelBrown">Teléfono</h3></div></div><p class="text-xs text-pastelMuted mt-3">318 888 5342</p></a>
+                <a href="https://wa.me/573188885342" target="_blank" rel="noopener noreferrer" class="group bg-pastelBg rounded-2xl p-5 border border-pastelMuted/15 hover:border-accentWarm/50 hover:-translate-y-1 transition-all"><div class="flex items-center gap-4"><div class="w-11 h-11 rounded-xl bg-pastelCard flex items-center justify-center text-pastelBrown group-hover:bg-pastelYellow transition-colors"><i class="fa-brands fa-whatsapp text-xl"></i></div><div><span class="text-xs uppercase tracking-wider text-pastelMuted">Mensajería</span><h3 class="font-semibold text-pastelBrown">WhatsApp</h3></div></div><p class="text-xs text-pastelMuted mt-3">Escríbeme directamente.</p></a>
+                <a href="#" class="group bg-pastelBg rounded-2xl p-5 border border-pastelMuted/15 hover:border-accentWarm/50 hover:-translate-y-1 transition-all"><div class="flex items-center gap-4"><div class="w-11 h-11 rounded-xl bg-pastelCard flex items-center justify-center text-pastelBrown group-hover:bg-pastelYellow transition-colors"><i class="fa-solid fa-link text-lg"></i></div><div><span class="text-xs uppercase tracking-wider text-pastelMuted">Otro</span><h3 class="font-semibold text-pastelBrown">Portafolio / enlace</h3></div></div><p class="text-xs text-pastelMuted mt-3">Agrega aquí otro enlace profesional.</p></a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-8 border-t border-pastelMuted/10 flex flex-col sm:flex-row items-center justify-between text-xs text-pastelMuted gap-4">
-        <p>© 2026 Yeferson. Diseñado con calidez y estilo minimalista.</p>
-        <div class="flex items-center gap-6 text-base">
-            <a href="#" class="hover:text-pastelBrown transition-colors"><i class="fa-brands fa-github"></i></a>
-            <a href="#" class="hover:text-pastelBrown transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="hover:text-pastelBrown transition-colors"><i class="fa-brands fa-twitter"></i></a>
+        <p>© 2026 Yeferson Camilo. Portafolio profesional.</p>
+        <div class="text-xs text-pastelMuted">
+            Ingeniería de Sistemas · Soporte TI · Redes · QA
         </div>
     </footer>
-
-    <!-- Custom Success Modal -->
-    <div id="customModal" class="hidden fixed inset-0 bg-pastelBrown/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-        <div class="bg-pastelBg rounded-3xl p-8 max-w-sm w-full border border-pastelMuted/20 shadow-xl text-center space-y-4">
-            <div class="w-12 h-12 rounded-full bg-pastelYellow mx-auto flex items-center justify-center text-accentWarm text-xl">
-                <i class="fa-solid fa-check"></i>
-            </div>
-            <h3 class="serif-title text-xl font-bold text-pastelBrown">¡Mensaje enviado!</h3>
-            <p id="modalText" class="text-sm text-pastelMuted">Gracias por ponerte en contacto. Te responderé muy pronto.</p>
-            <button onclick="closeModal()" class="w-full bg-pastelBrown text-pastelBg py-2.5 rounded-xl text-sm font-medium hover:bg-pastelMuted transition-colors">
-                Entendido
-            </button>
-        </div>
-    </div>
 
     <script>
         function toggleMobileMenu() {
